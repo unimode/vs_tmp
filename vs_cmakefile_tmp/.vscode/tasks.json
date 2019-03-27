@@ -4,16 +4,14 @@
         {
             "label": "debug",
             "type": "shell",
-            "command": "", 
-            "args": ["gcc", "-g", "${relativeFile}", "-o", "${fileBasenameNoExtension}.out"]
+            "command": "make", 
+            "args": []
         },
         {
             "label": "compile and run",
             "type": "shell",
-            "command": "",
-            "args": ["gcc", "-g", "${relativeFile}", "-o",
-                    "${fileBasenameNoExtension}.out", "&&", "clear", "&&", 
-                    "./${fileBasenameNoExtension}.out"],
+            "command": "make",
+            "args": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
