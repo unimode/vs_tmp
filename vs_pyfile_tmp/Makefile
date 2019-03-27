@@ -8,8 +8,6 @@ OBJ		:= $(OBJ:.c=.o)
 all: $(LIBNAME)
 
 $(LIBNAME): $(OBJ) 	
-	# gcc -shared -o $(LIBNAME) -fPIC crc.c
-	# gcc $^ -g -o $@ -pipe
 	gcc $^ -g -shared -fPIC -o $@
 
 %.o:%.c $(HEADERS)
@@ -23,6 +21,6 @@ test:
 
 clean:
 	@echo "---- Target clean ----"
-	rm -f LIBNAME
+	rm -f $(LIBNAME)
 	rm -f *.o 
 
