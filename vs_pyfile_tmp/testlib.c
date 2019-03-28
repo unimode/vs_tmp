@@ -6,6 +6,7 @@ uint8_t testGetUint8(void)
     return 250;
 }
 
+
 void testSimple(void)
 {
     printf("C function %s without parameters\n", __FUNCTION__);
