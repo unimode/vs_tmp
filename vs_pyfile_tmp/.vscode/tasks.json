@@ -4,7 +4,7 @@
         {
             "label": "debug",
             "type": "shell",
-            "command": "make", 
+            "command": "make",
             "args": []
         },
         {
@@ -18,17 +18,28 @@
             },
             "problemMatcher": {
                 "owner": "c",
-                "fileLocation":["relaive", "${workspaceRoot}"],
-                "pattern":{
-                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                        "file": 1,
-                        "line": 2,
-                        "column": 3,
-                        "severity": 4,
-                        "message": 5
+                "fileLocation": [
+                    "relaive",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
                 }
             }
-                
         },
+        {
+            "label": "test_tasks",
+            "type": "shell",
+            "command": "make",
+            "args": ["test", "TESTFLAG=testtask"],
+            "problemMatcher": [
+                "$go"
+            ]
+        }
     ]
 }

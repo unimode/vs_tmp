@@ -5,6 +5,7 @@ HEADERS	:= $(wildcard $(addsuffix /*.h, $(SRCDIR) ) )
 OBJ		:= $(notdir $(SRC) )
 OBJ		:= $(OBJ:.c=.o)
 
+
 all: $(LIBNAME)
 
 $(LIBNAME): $(OBJ) 	
@@ -18,6 +19,7 @@ test:
 	@echo $(SRC)
 	@echo $(OBJ)
 	@echo $(HEADERS)
+	@echo $(TESTFLAG)
 
 clean:
 	@echo "---- Target clean ----"

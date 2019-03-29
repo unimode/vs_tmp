@@ -12,7 +12,7 @@ void testSimple(void)
     printf("C function %s without parameters\n", __FUNCTION__);
 }
 
-const char* testSetUint(uint8_t ux8, uint16_t ux16, uint32_t ux32, uint64_t ux64)
+const   char* testSetUint(uint8_t ux8, uint16_t ux16, uint32_t ux32, uint64_t ux64)
 {
     static char str[256];
     
